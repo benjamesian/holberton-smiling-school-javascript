@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Smile School</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Coiny&display=swap" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./styles.css">
+  <script src="scripts.js"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-container position-relative">
+        <nav class="navbar navbar-expand-md navbar-dark position-absolute w-100 row py-3">
+          <button class="navbar-toggler mb-auto" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="col row">
+            <div class="header-logo col-md-9 col d-flex d-md-block">
+              <a class="navbar-brand mx-auto d-flex d-md-block flex-column align-items-center" href="#">
+                <img class="mr-md-3 mb-2" src="./images/smile_off.png" width="45" height="35">
+                <img src="./images/logo.png" width="138" height="36">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse col-md-3" id="navbarCollapse">
+              <ul class="navbar-nav text-center">
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Courses</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Login</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <!-- Hero section -->
+    <section class="section-hero hero-pricing text-white pt-5">
+      <div class="container">
+        <div class="section-body d-flex flex-column text-center pt-5 min-vh-100">
+          <div class="row justify-content-center align-items-center pt-5">
+            What is&nbsp;
+            <img class="mr-md-1 mb-2 p-1" src="./images/smile_off.png" width="36" height="28">
+            <img src="./images/logo.png" width="138" height="36">
+          </div>
+          <h1 class="py-5">Go pro!</h1>
+          <table class="table text-white">
+            <thead>
+              <tr>
+                <th scope="col" class="border-0 d-none d-md-block"></th>
+                <th scope="col" class="border-0">
+                  <button class="btn shadow-lg badge-pill bgd-primary p-1 mb-3 text-white text-uppercase">
+                    <span class="px-2">Buy 3 months</span>
+                  </button>
+                  <h2 class="font-weight-bold">$3.60</h2>
+                  <h6 class="text-muted">$1.20/month</h6>
+                </th>
+                <th scope="col" class="border-0">
+                  <button class="btn shadow-lg badge-pill bgd-primary p-1 mb-3 text-white text-uppercase text-nowrap">
+                    <span class="px-2">Buy 1 year</span>
+                  </button>
+                  <h2 class="font-weight-bold">$12.99</h2>
+                  <h6 class="text-muted">$1.08/month</h6>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="border-0 text-left">Unlimited access to all tutorials</th>
+                <td class="border-0">&#10004;</td>
+                <td class="border-0">&#10004;</td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-left">Access SmileSchool private forum</th>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-left">Access Smiles contests & Smiles Analysis</th>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-left">Get a free toothbrush</th>
+                <td></td>
+                <td>&#10004;</td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-left">Exclusive discount on all Signal products</th>
+                <td></td>
+                <td>&#10004;</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <!-- Quotes section -->
+    <section class="section-quotes bgd-primary">
+      <div class="container-fluid">
+        <div class="section-body text-white">
+          <div id="carousel" class="carousel slide" data-ride="carousel">
+            <div id="quoteInner" class="carousel-inner">
+              <div id="quoteLoader" class="loader"></div>
+            </div>
+            <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+              <span aria-hidden="true">
+                <img src="./images/arrow_white_left.png">
+              </span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+              <span aria-hidden="true">
+                <img src="./images/arrow_white_right.png">
+              </span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ section -->
+    <section class="section-faq">
+      <div class="container">
+        <div class="section-body">
+          <h2 class="section-title text-center">F.A.Q.</h2>
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <h5 class="font-weight-bold">How does this work?</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consect adip
+              </p>
+            </div>
+            <div class="col-12 col-md-6">
+              <h5 class="font-weight-bold">How does this work?</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consect adip
+              </p>
+            </div>
+            <div class="col-12 col-md-6">
+              <h5 class="font-weight-bold">How does this work?</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consect adip
+              </p>
+            </div>
+            <div class="col-12 col-md-6">
+              <h5 class="font-weight-bold">How does this work?</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consect adip
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="bgd-dark">
+      <div class="container">
+        <div class="footer-container pt-5 position-relative">
+          <div class="row pb-4 align-items-center">
+            <div class="footer-logo col-8 col d-flex d-md-block">
+              <a class="mx-auto d-flex align-items-center" href="#">
+                <img class="mr-md-3 mb-2" src="./images/smile_off.png" width="45" height="35">
+                <img src="./images/logo.png" width="138" height="36">
+              </a>
+            </div>
+            <div class="col-4">
+              <ul class="row align-items-center h-100 m-0">
+                <li>
+                  <a class="col text-white" href="#">Courses</a>
+                </li>
+                <li>
+                  <a class="col text-white" href="#">Pricing</a>
+                </li>
+                <li>
+                  <a class="col text-white" href="#">Login</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <p class="text-muted">&copy; smileschool 2020</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

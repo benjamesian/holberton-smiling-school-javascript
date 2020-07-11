@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Smile School</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Coiny&display=swap" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./styles.css">
+  <script src="scripts.js"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-container position-relative">
+        <nav class="navbar navbar-expand-md navbar-dark position-absolute w-100 row py-3">
+          <button class="navbar-toggler mb-auto" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="col row">
+            <div class="header-logo col-md-9 col d-flex d-md-block">
+              <a class="navbar-brand mx-auto d-flex d-md-block flex-column align-items-center" href="#">
+                <img class="mr-md-3 mb-2" src="./images/smile_off.png" width="45" height="35">
+                <img src="./images/logo.png" width="138" height="36">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse col-md-3" id="navbarCollapse">
+              <ul class="navbar-nav text-center">
+                <li class="nav-item">
+                  <a class="nav-link text-white text-uppercase font-weight-bold" href="#">Courses</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white text-uppercase font-weight-bold" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white text-uppercase font-weight-bold" href="#">Login</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <!-- Hero section -->
+    <section class="section-hero hero-courses text-white pt-5">
+      <div class="section-body d-flex flex-column text-center pt-5">
+        <div class="font-weight-bold mt-auto pt-5">
+          <h2 class="font-weight-bold">
+            &laquo; Don't cry because it's over
+            <br \>
+            <span class="color-primary">Smile</span> because it happened. &raquo;
+          </h2>
+        </div>
+        <div class="py-5 mt-auto w-100">
+          <div class="bgd-primary">
+            <div class="container">
+              <div class="row py-5">
+                <div class="col-12 col-lg-4">
+                  <div class="d-flex flex-column justify-content-center py-2">
+                    <h6 class="text-uppercase text-left mb-0">keywords</h6>
+                    <input class="btn bgd-primary-light border-0 text-white text-left w-100"
+                      placeholder="Search by keywords">
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="d-flex flex-column justify-content-center py-2">
+                    <h6 class="text-uppercase text-left mb-0">topic</h6>
+                    <div class="dropdown">
+                      <button class="btn bgd-primary-light w-100 text-light text-right dropdown-toggle" type="button"
+                        id="topicDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="float-left">Novice</span>
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="topicDropdown">
+                        <a class="dropdown-item" href="#">Novice</a>
+                        <a class="dropdown-item" href="#">Intermediate</a>
+                        <a class="dropdown-item" href="#">Expert</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="d-flex flex-column justify-content-center py-2">
+                    <h6 class="text-uppercase text-left mb-0">sort</h6>
+                    <div class="dropdown">
+                      <button class="btn bgd-primary-light w-100 text-light text-right dropdown-toggle" type="button" id="sortDropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="float-left">Most Popular</span>
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="sortDropdown">
+                        <a class="dropdown-item" href="#">Most Popular</a>
+                        <a class="dropdown-item" href="#">Most Recent</a>
+                        <a class="dropdown-item" href="#">Most Viewed</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Latest section -->
+    <section class="section-latest">
+      <div class="container">
+        <div class="section-body">
+          <h6 class="section-title text-muted">8 videos</h6>
+          <div class="row">
+            <div class="col-md-6 col-lg-3">
+              <div class="card border-0">
+                <div class="position-relative">
+                  <img class="card-img-top img-fluid" src="./images/thumbnail_1.jpg" alt="">
+                  <img class="card-img-overlay m-auto align-self-center" src="./images/play.png" alt="">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Diagonal Smile</h5>
+                  <p class="card-text text-muted">
+                    Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.
+                  </p>
+                  <div class="row align-items-center my-2">
+                    <img class="col-3 img-fluid rounded-circle" src="./images/profile_1.jpg" alt="">
+                    <h6 class="col color-primary pl-0">Phillip Massey</h6>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="">
+                      <img src="./images/star_on.png" alt="">
+                      <img src="./images/star_on.png" alt="">
+                      <img src="./images/star_on.png" alt="">
+                      <img src="./images/star_on.png" alt="">
+                      <img src="./images/star_off.png" alt="">
+                    </div>
+                    <div class="color-primary">
+                      8 min
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="card border-0">
+                <div class="position-relative">
+                  <img class="card-img-top img-fluid" src="./images/thumbnail_2.jpg" alt="">
+                  <img class="card-img-overlay m-auto align-self-center" src="./images/play.png" alt="">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Sad Smile</h5>
+                  <p class="card-text text-muted">
+                    Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.
+                  </p>
+                  <div class="row align-items-center my-2">
+                    <img class="col-3 img-fluid rounded-circle" src="./images/profile_1.jpg" alt="">
+                    <h6 class="col color-primary pl-0">Phillip Massey</h6>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="">
+                      <img src="./images/star_on.png" alt="">
+                      <img src="./images/star_on.png" alt="">
+                      <img src="./images/star_on.png" alt="">
+                      <img src="./images/star_on.png" alt="">
+                      <img src="./images/star_off.png" alt="">
+                    </div>
+                    <div class="color-primary">
+                      8 min
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="card border-0">
+                <div class="position-relative">
+                  <img class="card-img-top img-fluid" src="./images/thumbnail_3.jpg" alt="">
+                  <img class="card-img-overlay m-auto align-self-center" src="./images/play.png" alt="">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Sad Smile</h5>
+                  <p class="card-text text-muted">
+                    Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.
+                  </p>
+                  <div class="row align-items-center my-2">
+                    <img class="col-3 img-fluid rounded-circle" src="./images/profile_1.jpg" alt="">
+                    <h6 class="col color-primary pl-0">Phillip Massey</h6>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="">
+                      <img src="./images/star_on.png" alt="">
+                      <img src="./images/star_on.png" alt="">
+                      <img src="./images/star_on.png" alt="">
+                      <img src="./images/star_on.png" alt="">
+                      <img src="./images/star_off.png" alt="">
+                    </div>
+                    <div class="color-primary">
+                      8 min
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="card border-0">
+                <div class="position-relative">
+                  <img class="card-img-top img-fluid" src="./images/thumbnail_4.jpg" alt="">
+                  <img class="card-img-overlay m-auto align-self-center" src="./images/play.png" alt="">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Sad Smile</h5>
+                  <p class="card-text text-muted">
+                    Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.
+                  </p>
+                  <div class="row align-items-center my-2">
+                    <img class="col-3 img-fluid rounded-circle" src="./images/profile_1.jpg" alt="">
+                    <h6 class="col color-primary pl-0">Phillip Massey</h6>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="">
+                      <img src="./images/star_on.png" alt="">
+                      <img src="./images/star_on.png" alt="">
+                      <img src="./images/star_on.png" alt="">
+                      <img src="./images/star_on.png" alt="">
+                      <img src="./images/star_off.png" alt="">
+                    </div>
+                    <div class="color-primary">
+                      8 min
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="bgd-dark">
+      <div class="container">
+        <div class="footer-container pt-5 position-relative">
+          <div class="row pb-4 align-items-center">
+            <div class="footer-logo col-8 col d-flex d-md-block">
+              <a class="mx-auto d-flex align-items-center" href="#">
+                <img class="mr-md-3 mb-2" src="./images/smile_off.png" width="45" height="35">
+                <img src="./images/logo.png" width="138" height="36">
+              </a>
+            </div>
+            <div class="col-4">
+              <ul class="row align-items-center h-100 m-0 list-unstyled">
+                <li>
+                  <a class="col text-white" href="#">Courses</a>
+                </li>
+                <li>
+                  <a class="col text-white" href="#">Pricing</a>
+                </li>
+                <li>
+                  <a class="col text-white" href="#">Login</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <p class="text-muted">&copy; smileschool 2020</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
