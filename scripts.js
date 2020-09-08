@@ -23,6 +23,12 @@ function getStarPath(nStars, current) {
   return nStars >= current ? "./images/star_on.png" : "./images/star_off.png";
 }
 
+const queryOptions = {
+  q: '',
+  topic: 'all',
+  sortBy: 'most_popular',
+}
+
 function makeCardHTML(videoData, carousel=true) {
   return `
   <div class="${carousel ? "carousel-item" : ""} col-md-6 col-lg-3">
@@ -119,4 +125,44 @@ $(document).ready(function () {
     },
   ].forEach(loadContent);
   queryCourses('', 'all', 'most_popular');
+  $("#keywords").focusout(
+    function (e) {
+      if (e.target.value === queryOptions.q) {
+        return;
+      }
+      queryOptions.q = e.target.value;
+      queryCourses(queryOptions.q, queryOptions.topic, queryOptions.sortBy);
+    });
+  $(".sortOptions .dropdown-item").on('click', 
+    function (e) {
+      switch (e.target.text) {
+        case 'Most Popular':
+          queryOptions.sortBy = 'most_popular';
+          break;
+        case 'Most Recent':
+          queryOptions.sortBy = 'most_recent';
+          break;
+        case 'Most Viewed':
+          queryOptions.sortBy = 'most_viewed';
+          break;
+      }
+      $('#sortDropdown span').text(e.target.text);
+      queryCourses(queryOptions.q, queryOptions.topic, queryOptions.sortBy);
+    });
+    $(".topicOptions .dropdown-item").on('click', 
+    function (e) {
+      switch (e.target.text) {
+        case 'Novice':
+          queryOptions.topic = 'novice';
+          break;
+        case 'Intermediate':
+          queryOptions.topic = 'intermediate';
+          break;
+        case 'Expert':
+          queryOptions.topic = 'expert';
+          break;
+      }
+      $('#topicDropdown span').text(e.target.text);
+      queryCourses(queryOptions.q, queryOptions.topic, queryOptions.sortBy);
+    });
 });

@@ -12,11 +12,11 @@
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -80,7 +80,7 @@
                   <div class="d-flex flex-column justify-content-center py-2">
                     <h6 class="text-uppercase text-left mb-0">keywords</h6>
                     <input class="btn bgd-primary-light border-0 text-white text-left w-100"
-                      placeholder="Search by keywords">
+                      id="keywords" placeholder="Search by keywords">
                   </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
@@ -91,7 +91,7 @@
                         id="topicDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="float-left">Novice</span>
                       </button>
-                      <div class="dropdown-menu" aria-labelledby="topicDropdown">
+                      <div class="dropdown-menu topicOptions" aria-labelledby="topicDropdown">
                         <a class="dropdown-item" href="#">Novice</a>
                         <a class="dropdown-item" href="#">Intermediate</a>
                         <a class="dropdown-item" href="#">Expert</a>
@@ -107,7 +107,7 @@
                         id="sortDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="float-left">Most Popular</span>
                       </button>
-                      <div class="dropdown-menu" aria-labelledby="sortDropdown">
+                      <div class="dropdown-menu sortOptions" aria-labelledby="sortDropdown">
                         <a class="dropdown-item" href="#">Most Popular</a>
                         <a class="dropdown-item" href="#">Most Recent</a>
                         <a class="dropdown-item" href="#">Most Viewed</a>
