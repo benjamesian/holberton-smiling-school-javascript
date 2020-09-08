@@ -23,13 +23,15 @@ function getStarPath(nStars, current) {
   return nStars >= current ? "./images/star_on.png" : "./images/star_off.png";
 }
 
-function makeCardHTML(videoData) {
+function makeCardHTML(videoData, carousel=true) {
   return `
-  <div class="carousel-item col-md-6 col-lg-3">
+  <div class="${carousel ? "carousel-item" : ""} col-md-6 col-lg-3">
     <div class="">
       <div class="card border-0">
         <div class="position-relative">
-          <img class="card-img-top img-fluid" src="${videoData.thumb_url}" alt="">
+          <img class="card-img-top img-fluid" src="${
+            videoData.thumb_url
+          }" alt="">
           <img class="card-img-overlay m-auto align-self-center" src="./images/play.png" alt="">
         </div>
         <div class="card-body">
@@ -38,7 +40,9 @@ function makeCardHTML(videoData) {
             ${videoData["sub-title"]}
           </p>
           <div class="row align-items-center my-2">
-            <img class="col-3 img-fluid rounded-circle" src=${videoData.author_pic_url} alt="">
+            <img class="col-3 img-fluid rounded-circle" src=${
+              videoData.author_pic_url
+            } alt="">
             <h6 class="col color-primary pl-0">${videoData.author}</h6>
           </div>
           <div class="d-flex align-items-center justify-content-between">
@@ -60,28 +64,59 @@ function makeCardHTML(videoData) {
   `;
 }
 
+function slideCarousel(carouselItems, direction) {
+  switch (direction) {
+    case "left":
+      carouselItems.push(carouselItems.pop(0));
+      break;
+    case "right":
+      carouselItems.unshift(carouselItems.pop());
+      break;
+  }
+}
+
+function loadContent(data) {
+  $.get(data.url, function (res) {
+    $(data.loaderID).hide();
+    $(data.parentID).append(
+      res.reduce((acc, el) => acc + data.handler(el), "")
+    );
+    $(`${data.parentID} .carousel-item`).first().addClass("active");
+  });
+}
+
+function queryCourses(q, topic, sort) {
+  $.get(`https://smileschool-api.hbtn.info/courses?q=${q||''}&topic=${topic||'all'}&sort=${sort||'most_popular'}`,
+    function (res) {
+      $("#courseLoader").hide();
+      $("#courseVideos").html((res.courses.length || 0) + ' videos');
+      $("#courseInner").html(
+        res.courses.reduce((acc, el) => acc + makeCardHTML(el, false), "")
+      )
+    }
+  );
+}
+
 $(document).ready(function () {
-  $.get("https://smileschool-api.hbtn.info/quotes", function (data) {
-    $("#quoteLoader").hide();
-    data.forEach(function (quoteData) {
-      $("#quoteInner").append(makeQuoteHTML(quoteData));
-    });
-    $("#quoteInner .carousel-item").first().addClass("active");
-  });
-
-  $.get("https://smileschool-api.hbtn.info/popular-tutorials", function (data) {
-    $("#videoLoader").hide();
-    data.forEach(function (videoData) {
-      $("#videoInner").append(makeCardHTML(videoData));
-    });
-    $("#videoInner .carousel-item").first().addClass("active");
-  });
-
-  $.get("https://smileschool-api.hbtn.info/latest-videos", function (data) {
-    $("#latestLoader").hide();
-    data.forEach(function (latestData) {
-      $("#latestInner").append(makeCardHTML(latestData));
-    });
-    $("#latestInner .carousel-item").first().addClass("active");
-  });
+  [
+    {
+      url: "https://smileschool-api.hbtn.info/quotes",
+      loaderID: "#quoteLoader",
+      parentID: "#quoteInner",
+      handler: makeQuoteHTML,
+    },
+    {
+      url: "https://smileschool-api.hbtn.info/popular-tutorials",
+      loaderID: "#videoLoader",
+      parentID: "#videoInner",
+      handler: makeCardHTML,
+    },
+    {
+      url: "https://smileschool-api.hbtn.info/latest-videos",
+      loaderID: "#latestLoader",
+      parentID: "#latestInner",
+      handler: makeCardHTML,
+    },
+  ].forEach(loadContent);
+  queryCourses('', 'all', 'most_popular');
 });
